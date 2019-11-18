@@ -1,0 +1,44 @@
+hr {
+    border-top: 3px solid darkblue;
+    width: 90%;
+}
+
+h1 {
+    color:darkblue;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    color:darkblue;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    background-color: azure;
+}
+
+#errorMessages {
+    border: 2px solid black;
+    background-color: lightpink;
+}
+
+#searchDVDForm {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    text-align: center;
+    margin-left: 10%;
+}
+
+input {
+    border: none;
+}
+
+
+
+

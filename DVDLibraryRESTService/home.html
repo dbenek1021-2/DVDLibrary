@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DVD List of Not So Crappy Movies</title>
+
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet"></link>
+    </head>
+    <body>
+        <div class="headerContainer" id="homePage">
+            <h1>DVD Library</h1>
+            <div class="form-group col-md-10" id="searchDVDForm">
+                <div class="col-md-3" id="createButtonDiv">
+                    <input type="hidden" id="create-dvd-id">
+                    <button type="button" id="create-dvd-button" class="btn btn-default" onclick="showCreateDVDForm()">
+                        Create DVD
+                    </button>
+                </div>
+            
+                <div class="form-group col-md-5" id="searchAreaDiv">
+                    <div class="col-md-6">
+                        <select class="form-control" id="category">
+                            <option value="" disabled selected>Search Category</option>
+                            <option value="Title">Title</option>
+                            <option value="Release Year">Release Year</option>
+                            <option value="Director Name">Director Name</option>
+                            <option value="Rating">Rating</option>
+                        </select>
+                    </div>
+            
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="search-term" placeholder="Search Term">
+                    </div>
+            
+                </div>
+                    <button type="button" id="search-button" class="btn btn-default">
+                        Search
+                    </button>
+            </div>
+            
+            <div class="headerContainer2" style="display: none" id="headerTitleDiv">
+                <h2><input type="text" id="dvdDetailTitle" readonly></h2>
+            </div>
+            <div class="col-md-12"><hr /></div>
+        </div>
+<!-- Start of home page -->
+        <div class="container">
+            <div class="errorMessageContainer" id="errorMessagesDiv" style="display: none">
+                <input type="text" class="form-control" id="errorMessages" readonly>
+            </div>
+            <div class="row">
+                <div>
+                    <div id="dvdTableDiv">
+                        <table id="DVDTable" class="table table-striped" style="width:100%">
+                            <tr>
+                                <th>Title</th>
+                                <th>Release Date</th>
+                                <th>Director</th>
+                                <th>Rating</th>
+                                <th></th>
+                            </tr>
+                            <tbody id="contentRows"></tbody>
+                        </table>
+                    </div>
+<!-- Start of DVD details div -->
+                    <div id="dvdDetailDiv" style="display: none">
+                        
+                        <form class="form-horizontal" role="form" id="dvd-details-form">
+                            <div class="form-group">
+                                <label for="release-year" class="col-md-4 control-label">
+                                    Release Year:
+                                </label>
+
+                                <div class="col-md-8">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="details-release-year" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="director" class="col-md-4 control-label">
+                                    Director:</label>
+
+                                <div class="col-md-8">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="details-director" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rating" class="col-md-4 control-label">
+                                    Rating:</label>
+
+                                <div class="col-md-8">
+                                        <input type="text"
+                                        class="form-control"
+                                        id="details-rating" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes" class="col-md-4 control-label">
+                                    Notes:</label>
+
+                                <div class="col-md-8">
+                                    <textarea type="text"
+                                       class="form-control input-md"
+                                       id="details-notes" readonly>
+                                    </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-4">
+                                    <input type="hidden" id="dvd-details-id">
+                                    <button type="button"
+                                            id="edit-cancel-button"
+                                            class="btn btn-default"
+                                            onclick="hideDVDDetailForm()">
+                                        Back
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                    
+        <!-- Start edit DVD div -->
+                    <div class="col-md-6" id="editDVDDiv" style="display: none">
+                        <h2>Edit DVD</h2>
+
+                        <form class="form-horizontal" role="form" id="edit-dvd-form">
+                            <div class="form-group">
+                                <label for="edit-title" class="col-md-4 control-label">
+                                    DVD Title:
+                                </label>
+
+                                <div class="col-md-8">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="edit-title"
+                                           placeholder="DVD Title">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-release-year" class="col-md-4 control-label">
+                                    Release Year:
+                                </label>
+
+                                <div class="col-md-8">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="edit-release-year"
+                                           placeholder="Release Year">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-director" class="col-md-4 control-label">
+                                    Director:</label>
+
+                                <div class="col-md-8">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="edit-director"
+                                           placeholder="Director">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-rating" class="col-md-4 control-label">
+                                    Rating:</label>
+
+                                <div class="col-md-8">
+                                    <select class="form-control" id="edit-rating" required>
+                                        <option value="G">G</option>
+                                        <option value="PG">PG</option>
+                                        <option value="PG-13">PG-13</option>
+                                        <option value="R">R</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-notes" class="col-md-4 control-label">
+                                    Notes:</label>
+
+                                <div class="col-md-8">
+                                    <textarea type="text"
+                                       class="form-control input-md"
+                                       id="edit-notes"
+                                       placeholder="Notes">
+                                    </textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-4">
+                                    <input type="hidden" id="edit-dvd-id">
+                                    <button type="button"
+                                            id="edit-cancel-button"
+                                            class="btn btn-default"
+                                            onclick="hideEditForm()">
+                                        Cancel
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button"
+                                            id="edit-button"
+                                            class="btn btn-default">
+                                        Save Changes
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div> <!-- End col div -->
+                <!--
+        #4: Add col to hold the new contact form - have it take up the other half of the row
+                -->
+                <div class="col-md-6" style="display: none" id="createDVDDiv">
+                    <h2>Create DVD</h2>
+
+                    <form class="form-horizontal" role="form" id="create-dvd-form">
+                        <div class="form-group">
+                            <label for="create-dvd-title" class="col-md-4 control-label">
+                                DVD Title:
+                            </label>
+
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="create-dvd-title"
+                                       placeholder="DVD Title" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-release-year" class="col-md-4 control-label">
+                                Release Year:
+                            </label>
+
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="create-release-year"
+                                       placeholder="Release Year" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-director" class="col-md-4 control-label">
+                                Director:</label>
+
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="create-director"
+                                       placeholder="Director">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="create-rating" class="col-md-4 control-label">
+                                Rating:</label>
+
+                            <div class="col-md-8">
+                                <select class="form-control" id="create-rating">
+                                    <option value="" disabled selected>Choose Rating</option>
+                                    <option value="G">G</option>
+                                    <option value="PG">PG</option>
+                                    <option value="PG-13">PG-13</option>
+                                    <option value="R">R</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="create-notes">
+                            <label for="create-notes" class="col-md-4 control-label">
+                                Notes:</label>
+
+                            <div class="col-md-8">
+                                <textarea type="text"
+                                       class="form-control input-md"
+                                       id="create-notes"
+                                       placeholder="Notes">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-4">
+                                    <input type="hidden" id="create-dvd-id">
+                                    <button type="button"
+                                            id="create-cancel-button"
+                                            class="btn btn-default"
+                                            onclick="hideCreateForm()">
+                                        Cancel
+                                    </button>
+                                </div>
+                            <div class="col-md-4">
+                                <button type="button"
+                                        id="add-new-dvd-button"
+                                        class="btn btn-default">
+                                    Create DVD
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

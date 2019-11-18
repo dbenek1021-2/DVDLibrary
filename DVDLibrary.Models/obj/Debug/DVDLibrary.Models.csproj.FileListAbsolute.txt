@@ -1,0 +1,6 @@
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.Models\bin\Debug\DVDLibrary.Models.dll
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.Models\bin\Debug\DVDLibrary.Models.pdb
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.Models\obj\Debug\DVDLibrary.Models.csprojAssemblyReference.cache
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.Models\obj\Debug\DVDLibrary.Models.csproj.CoreCompileInputs.cache
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.Models\obj\Debug\DVDLibrary.Models.dll
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.Models\obj\Debug\DVDLibrary.Models.pdb

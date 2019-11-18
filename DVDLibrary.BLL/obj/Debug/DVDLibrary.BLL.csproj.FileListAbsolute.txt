@@ -1,0 +1,11 @@
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\bin\Debug\DVDLibrary.BLL.dll
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\bin\Debug\DVDLibrary.BLL.pdb
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\bin\Debug\DVDLibrary.Data.dll
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\bin\Debug\DVDLibrary.Models.dll
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\bin\Debug\DVDLibrary.Data.pdb
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\bin\Debug\DVDLibrary.Models.pdb
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\obj\Debug\DVDLibrary.BLL.csprojAssemblyReference.cache
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\obj\Debug\DVDLibrary.BLL.csproj.CoreCompileInputs.cache
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\obj\Debug\DVDLibrary.BLL.csproj.CopyComplete
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\obj\Debug\DVDLibrary.BLL.dll
+C:\Users\DaniB\Documents\SoftwareGuild\online-net-dbenek1021\Classwork\DVDLibrary\DVDLibrary.BLL\obj\Debug\DVDLibrary.BLL.pdb
